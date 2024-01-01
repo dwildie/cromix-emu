@@ -1,5 +1,7 @@
 # cromix-emu
 
+A software emulation of Cromemco hardware to run Cromix Plus.
+
 ## Release 1.1
 * Requires Java 17 runtime
 * Minimal UI for 64FDC and STDC
@@ -12,17 +14,21 @@ The 64FDC drives can be ejected and loaded.
 
 ![UI Image](emu-ui.png)
 
-Note: Changes to the disk image files are not automatically saved.  You must use the Sync buttons to persist any changes.
+Note: The emulator loads and operates on the 64FDC and STDC disk images in memory, changes to the disk image files are not automatically persisted to disk.  You must use the Sync buttons to persist any changes.
 
 The info icons display the STDC disk parameters and partition table.
 
 ![UI Image](emu-ui-info.png)
 
-### Config file
+### Boot device
 
-The config file is in yaml format, https://yaml.org/spec/1.2.2
+The default boot device is configured in the boot section of the config file which is in yaml format, https://yaml.org/spec/1.2.2.
+
+Whilst running the boot device can be changed and the emulation rebooted via the UI.
 
 #### Boot section
+![Boot Image](emu-ui-boot.png)
+
 * **board:** Can be either "Cromemco 64FDC" or "Cromemco STDC"
 * **device:** The index of the device: 0,1,2,3 for the 64FDC or 0,1 for the STDC
 * **unit:** Ignored for the 64FDC, the partition index for the STDC
@@ -32,6 +38,7 @@ The .hdd file must be converted to a raw image file using the mfm_util utility, 
 
 `mfm_util --emulation_file 20220705.D45.C1536.H16.master.hdd --extracted_data_file 20220705.D45.C1536.H16.master.img -a`
 
+# Previous releases
 ## Release 1.0
 
 Requires Java 8 (minimum) runtime
