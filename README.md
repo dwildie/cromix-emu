@@ -9,7 +9,7 @@ A software emulation of Cromemco hardware to run Cromix Plus.
 * Boots from partitioned ST images
 
 ### UI
-The UI display the current status and activity for the 64FDC and STDC drives.  
+The UI displays the current status and activity for the 64FDC and STDC drives.  
 The 64FDC drives can be ejected and loaded.
 
 ![UI Image](emu-ui.png)
@@ -24,7 +24,7 @@ The info icons display the STDC disk parameters and partition table.
 
 The default boot device is configured in the boot section of the config file which is in yaml format, https://yaml.org/spec/1.2.2.
 
-Whilst running the boot device can be changed and the emulation rebooted via the UI.
+Whilst running, the boot device can be changed and the emulation rebooted via the UI.
 
 #### Boot section
 ![Boot Image](emu-ui-boot.png)
