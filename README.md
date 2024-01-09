@@ -2,6 +2,8 @@
 
 A software emulation of Cromemco hardware to run Cromix Plus.
 
+Usage: java -jar s100-68k-emu-1.1.jar -configfile ./Cromix-cromemco.yaml -g
+
 ## Release 1.1
 * Requires Java 17 runtime
 * Minimal UI for 64FDC and STDC
