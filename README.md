@@ -2,7 +2,24 @@
 
 A software emulation of Cromemco hardware to run Cromix Plus.
 
-Usage: java -jar s100-68k-emu-1.1.jar -configfile ./Cromix-cromemco.yaml -g
+Usage: java -jar s100-68k-emu-1.2.jar -configfile ./Cromix-cromemco.yaml -g
+
+## Release 1.2
+* Requires Java 17 runtime
+* Configurable terminal font size and style
+* Inbuilt telnet server provides remote console capability
+* Defect fixes
+
+### Font size and style
+The font size and style for the inbuilt console terminal can be configured using the console.fontSize and console.fontName properties in the configuration file.
+
+### Telnet server
+The telnet server can be used inplace of the inbuilt console terminal to provide a remote console.  To enable telnet, change the console.type property in the configuration file to **term**.  By default the telnet server listens on port 2020 at address 127.0.0.1.  For remote capability change the listening address, property console.address, to **0.0.0.0**.  
+Cromix expects the Enter key to send 0xd (ctrl-M), this is not the default in some Windows telnet client software such as putty.
+
+**Note:** 
+* The included ST image is based on version 162 , it has been discovered that some programs, such as **find**, still require the Z80 CPU.  Therefore, these programs will crash the emulator.  An updated ST image will be included in a later release.
+* Refer to previous release notes for other details.
 
 ## Release 1.1
 * Requires Java 17 runtime
