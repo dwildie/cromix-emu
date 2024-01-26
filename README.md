@@ -14,7 +14,7 @@ Usage: java -jar s100-68k-emu-1.2.jar -configfile ./Cromix-cromemco.yaml -g
 The font size and style for the inbuilt console terminal can be configured using the console.fontSize and console.fontName properties in the configuration file.
 
 ### Telnet server
-The telnet server can be used inplace of the inbuilt console terminal to provide a remote console.  To enable telnet, change the console.type property in the configuration file to **term**.  By default the telnet server listens on port 2020 at address 127.0.0.1.  For remote capability change the listening address, property console.address, to **0.0.0.0**.  
+The telnet server can be used inplace of the inbuilt console terminal to provide a remote console.  To enable telnet, change the console.type property in the configuration file to **telnet**.  By default the telnet server listens on port 2020 at address 127.0.0.1.  For remote capability change the listening address (property console.address) to **0.0.0.0**.  
 Cromix expects the Enter key to send 0xd (ctrl-M), this is not the default in some Windows telnet client software such as putty.
 
 **Note:** 
